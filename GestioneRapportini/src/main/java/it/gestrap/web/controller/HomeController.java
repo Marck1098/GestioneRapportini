@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import it.gestrap.springmvc.service.ClientiServiceImpl;
+import it.gestrap.entita.Clienti;
 import it.gestrap.springmvc.service.ClientiService;
 
 @Controller
@@ -25,8 +26,24 @@ public class HomeController {
 	}
 	
 	 @GetMapping("/delete")
-	    public String deleteCustomer(@RequestParam("idClienti") int theId) {
+	    public String delete(@RequestParam("idClienti") int theId) {
 		 service.delete(theId);
+	        return "redirect:/index";
+	    }
+	 
+	 @GetMapping("/insert")
+	    public String insert(
+	    		@RequestParam("codice") String codice,
+	    		@RequestParam("nome") String nome,
+	    		@RequestParam("desc") String desc,
+	    		@RequestParam("piva") String piva ) {
+		 Clienti clienti = new Clienti();
+		 clienti.setCodice(codice);
+		 clienti.setNome(nome);
+		 clienti.setDescrizione(desc);
+		 clienti.setPiva(piva);
+		 
+		 service.save(clienti);
 	        return "redirect:/index";
 	    }
 }
