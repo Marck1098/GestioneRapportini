@@ -20,7 +20,7 @@ public class ClientiDaoImpl implements ClientiDao {
     private SessionFactory sessionFactory;
 
     @Override
-    public List < Clienti > getClienti() {
+    public List < Clienti > getAll() {
         Session session = sessionFactory.getCurrentSession();
         CriteriaBuilder cb =  session.getCriteriaBuilder();
         CriteriaQuery < Clienti > cq = cb.createQuery(Clienti.class);
@@ -30,22 +30,21 @@ public class ClientiDaoImpl implements ClientiDao {
         return query.getResultList();
     }
 
-   
     @Override
-    public void saveCliente(Clienti theCustomer) {
+    public void save(Object cliente) {
         Session currentSession = sessionFactory.getCurrentSession();
-        currentSession.saveOrUpdate(theCustomer);
+        currentSession.saveOrUpdate(cliente);
     }
 
     @Override
-    public Clienti getCliente(int theId) {
+    public Clienti get(int id) {
         Session currentSession = sessionFactory.getCurrentSession();
-        Clienti theCustomer = currentSession.get(Clienti.class, theId);
-        return theCustomer;
+        Clienti cliente = currentSession.get(Clienti.class, id);
+        return cliente;
     }
     
     @Override
-    public void deleteCliente(int id) {
+    public void delete(int id) {
         Session session = sessionFactory.getCurrentSession();
         Clienti clienti = session.byId(Clienti.class).load(id);
         session.delete(clienti);

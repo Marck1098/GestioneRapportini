@@ -8,12 +8,12 @@ import it.gestrap.entita.Clienti;
 
 public interface ClientiDao {
 
-    public List < Clienti > getClienti();
+    public List < Clienti > getAll();
 
-    public void saveCliente(Clienti theCustomer);
+    public void save(Object object);
 
-    public Clienti getCliente(int theId);
+    public Clienti get(int theId);
 
-    public void deleteCliente(int theId);
+    public void delete(int theId);
     
 }

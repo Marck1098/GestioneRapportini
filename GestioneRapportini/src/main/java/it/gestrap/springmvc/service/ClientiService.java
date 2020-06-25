@@ -6,13 +6,14 @@ import it.gestrap.entita.Clienti;
 
 public interface ClientiService {
 
-    public List < Clienti > getClienti();
+    public List<Clienti> getAll();
 
-    public void saveClienti(Clienti theCustomer);
+    public void save(Clienti cliente);
 
-    public Clienti getCliente(int theId);
+    public Clienti get(int id);
 
-    public void deleteClienti(int theId);
+    public void delete(int id);
+
 	
 
 }

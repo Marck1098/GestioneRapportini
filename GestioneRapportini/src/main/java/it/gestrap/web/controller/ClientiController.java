@@ -19,39 +19,39 @@ import it.gestrap.springmvc.service.ClientiService;
 public class ClientiController {
 
     @Autowired
-    private ClientiService clientiService;
+    private ClientiService service;
     
     @GetMapping("/list")
     public String listCustomers(Model theModel) {
-        List < Clienti > theCustomers = clientiService.getClienti();
-        theModel.addAttribute("customers", theCustomers);
-        return "list-customers";
+        List<Clienti> clienti = service.getAll();
+        theModel.addAttribute("clienti", clienti);
+        return "list-clienti";
     }
 
     @GetMapping("/showForm")
     public String showFormForAdd(Model theModel) {
-        Clienti theCustomer = new Clienti();
-        theModel.addAttribute("customer", theCustomer);
+    	Clienti theCustomer = new Clienti();
+        theModel.addAttribute("cliente", theCustomer);
         return "customer-form";
     }
 
     @PostMapping("/saveCustomer")
-    public String saveCustomer(@ModelAttribute("customer") Clienti theCustomer) {
-    	clientiService.saveClienti(theCustomer);
+    public String saveCustomer(@ModelAttribute("cliente") Clienti theCustomer) {
+    	service.save(theCustomer);
         return "redirect:/customer/list";
     }
 
     @GetMapping("/updateForm")
-    public String showFormForUpdate(@RequestParam("customerId") int theId,
+    public String showFormForUpdate(@RequestParam("clienteId") int theId,
         Model theModel) {
-        Clienti theCustomer = clientiService.getCliente(theId);
-        theModel.addAttribute("customer", theCustomer);
+    	Clienti cliente = (Clienti) service.get(theId);
+        theModel.addAttribute("customer", cliente);
         return "customer-form";
     }
 
     @GetMapping("/delete")
-    public String deleteCustomer(@RequestParam("customerId") int theId) {
-    	clientiService.deleteClienti(theId);
+    public String deleteCustomer(@RequestParam("clienteId") int theId) {
+    	service.delete(theId);
         return "redirect:/customer/list";
     }
     

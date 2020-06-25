@@ -28,7 +28,7 @@ public class Commesse implements java.io.Serializable {
 
 	private Integer id;
 	private Clienti clienti;
-	private Tipocommesse tipocommesse;
+	private TipoCommesse tipocommesse;
 	private String codcommessa;
 	private String descrizione;
 	private Date datainserimento;
@@ -42,7 +42,7 @@ public class Commesse implements java.io.Serializable {
 	public Commesse() {
 	}
 
-	public Commesse(Clienti clienti, Tipocommesse tipocommesse, String codcommessa, Date datainserimento, int ngiorni,
+	public Commesse(Clienti clienti, TipoCommesse tipocommesse, String codcommessa, Date datainserimento, int ngiorni,
 			int tariffa, int importo) {
 		this.clienti = clienti;
 		this.tipocommesse = tipocommesse;
@@ -53,7 +53,7 @@ public class Commesse implements java.io.Serializable {
 		this.importo = importo;
 	}
 
-	public Commesse(Clienti clienti, Tipocommesse tipocommesse, String codcommessa, String descrizione,
+	public Commesse(Clienti clienti, TipoCommesse tipocommesse, String codcommessa, String descrizione,
 			Date datainserimento, int ngiorni, int tariffa, int importo, BigDecimal sconto, Set<Rapportini> rapportinis,
 			Set<Comdip> comdips) {
 		this.clienti = clienti;
@@ -93,11 +93,11 @@ public class Commesse implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idtipocommessa", nullable = false)
-	public Tipocommesse getTipocommesse() {
+	public TipoCommesse getTipocommesse() {
 		return this.tipocommesse;
 	}
 
-	public void setTipocommesse(Tipocommesse tipocommesse) {
+	public void setTipocommesse(TipoCommesse tipocommesse) {
 		this.tipocommesse = tipocommesse;
 	}
 

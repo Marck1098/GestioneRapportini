@@ -29,7 +29,7 @@ public class Dipendenti implements java.io.Serializable {
 
 	private Integer id;
 	private Ruoli ruoli;
-	private Tipcontratto tipcontratto;
+	private TipoContratto tipcontratto;
 	private String matricola;
 	private String nome;
 	private String cognome;
@@ -46,7 +46,7 @@ public class Dipendenti implements java.io.Serializable {
 	public Dipendenti() {
 	}
 
-	public Dipendenti(Ruoli ruoli, Tipcontratto tipcontratto, String matricola, String nome, String cognome,
+	public Dipendenti(Ruoli ruoli, TipoContratto tipcontratto, String matricola, String nome, String cognome,
 			Date datanascita, String codfiscale, String numerotelefono, int stipendioannuo, Date dataassunzione) {
 		this.ruoli = ruoli;
 		this.tipcontratto = tipcontratto;
@@ -60,7 +60,7 @@ public class Dipendenti implements java.io.Serializable {
 		this.dataassunzione = dataassunzione;
 	}
 
-	public Dipendenti(Ruoli ruoli, Tipcontratto tipcontratto, String matricola, String nome, String cognome,
+	public Dipendenti(Ruoli ruoli, TipoContratto tipcontratto, String matricola, String nome, String cognome,
 			Date datanascita, String codfiscale, String residenza, String numerotelefono, int stipendioannuo,
 			Date dataassunzione, Date datalicenziamento, Set<Comdip> comdips, Set<Rapportini> rapportinis) {
 		this.ruoli = ruoli;
@@ -103,11 +103,11 @@ public class Dipendenti implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idtipcontratto", nullable = false)
-	public Tipcontratto getTipcontratto() {
+	public TipoContratto getTipcontratto() {
 		return this.tipcontratto;
 	}
 
-	public void setTipcontratto(Tipcontratto tipcontratto) {
+	public void setTipcontratto(TipoContratto tipcontratto) {
 		this.tipcontratto = tipcontratto;
 	}
 
