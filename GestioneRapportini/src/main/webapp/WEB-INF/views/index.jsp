@@ -62,7 +62,7 @@
 		
 		<!-- START SECTION -->
   		<div class="section hero text-center background-dark dark-bg">
-  			<div class="background-image" style="background: url(/resources/images/hero.jpg) no-repeat center center; background-size: cover; opacity: .2;"></div>
+  			<div class="background-image" style="background: url(<c:url value="/resources/images/hero.jpg" />) no-repeat center center; background-size: cover; opacity: .2;"></div>
   			<div class="container">
   				<div class="row">
   					<div class="col-md-12">
@@ -117,7 +117,7 @@
 
   		<!-- START SECTION -->
   		<div class="section hero text-center background-primary dark-bg">
-  			<div class="background-image" style="background: url(/resources/images/hero.jpg) no-repeat fixed center center; background-size: cover; opacity: .2;"></div>
+  			<div class="background-image" style="background: url(<c:url value="/resources/images/hero.jpg" />) no-repeat fixed center center; background-size: cover; opacity: .2;"></div>
   			<div class="container">
   				<div class="row">
   					<div class="col-md-12">
@@ -140,8 +140,8 @@
   						<div class="entry">
   							<div class="entry-media">
   								<a href="#" title="">
-  									<span class="absolute-wrapper">
-  									<img src="/resources/images/blog1.jpg" alt="" class="img-responsive" />
+  									<span class="absolute-wrapper"></span>
+  									<img src="<c:url value="/resources/images/blog1.jpg" />" alt="" class="img-responsive" />
   								</a>
   							</div>
   							<h3 class="entry-title"><a href="#" title="Yelp Is Awful for Everyone Involved">Yelp Is Awful for Everyone Involved</a></h3>
@@ -154,7 +154,7 @@
   							<div class="entry-media">
   								<a href="#" title="">
   									<span class="absolute-wrapper"></span>
-  									<img src="/resources/images/blog2.jpg" alt="" class="img-responsive" />
+  									<img src="<c:url value="/resources/images/blog2.jpg" />" alt="" class="img-responsive" />
   								</a>
   							</div>
   							<h3 class="entry-title"><a href="#" title="2 Best Sites to Build Your Own Website">2 Best Sites to Build Your Own Website</a></h3>
@@ -167,7 +167,7 @@
   							<div class="entry-media">
   								<a href="#" title="">
   									<span class="absolute-wrapper"></span>
-  									<img src="/resources/images/blog3.jpg" alt="" class="img-responsive" />
+  									<img src="<c:url value="/resources/images/blog3.jpg" />" alt="" class="img-responsive" />
   								</a>
   							</div>
   							<h3 class="entry-title"><a href="#" title="2 Best Sites to Build Your Own Website">2 Best Sites to Build Your Own Website</a></h3>
@@ -182,7 +182,7 @@
 
   		<!-- START SECTION -->
   		<div class="section hero text-center background-dark dark-bg">
-  			<div class="background-image" style="background: url(/resources/images/hero.jpg) no-repeat fixed center center; background-size: cover; opacity: .2;"></div>
+  			<div class="background-image" style="background: url(<c:url value="/resources/images/hero.jpg" />) no-repeat fixed center center; background-size: cover; opacity: .2;"></div>
   			<div class="container">
   				<div class="row">
   					<div class="col-md-12">
@@ -227,7 +227,7 @@
 
   		<!-- START SECTION -->
   		<div class="section hero text-center background-light">
-  			<div class="background-image" style="background: url(/resources/images/hero.jpg) no-repeat fixed center center; background-size: cover; opacity: .2;"></div>
+  			<div class="background-image" style="background: url(<c:url value="/resources/images/hero.jpg" />) no-repeat fixed center center; background-size: cover; opacity: .2;"></div>
   			<div class="container">
   				<div class="row">
   					<div class="col-md-12">
