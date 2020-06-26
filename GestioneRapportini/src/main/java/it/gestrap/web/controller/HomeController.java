@@ -22,13 +22,23 @@ public class HomeController {
 	 
 	 @GetMapping("/")
 	 public ModelAndView index() { 
+		 return new ModelAndView("index"); 
+			 }
+	 
+	 @GetMapping("/login")
+	 public ModelAndView login() { 
+		 return new ModelAndView("loginpage");
+			 }
+	 
+	 @GetMapping("/home")
+	 public ModelAndView home() { 
 		 return new ModelAndView("index");
 			 }
 	
 	 @GetMapping("/delete")
 	    public String delete(@RequestParam("idClienti") int theId) {
 		 service.delete(theId);
-	        return "redirect:/"; 
+	        return "redirect:/";  
 	    }
 	 
 	 @GetMapping("/insert")

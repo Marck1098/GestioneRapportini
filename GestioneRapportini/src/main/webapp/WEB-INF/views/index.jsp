@@ -1,13 +1,12 @@
-  <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
- pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
   <!DOCTYPE html>
   <html lang="">
   	<head>
   		<meta charset="utf-8">
   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
-  		<title>Indigo</title>
+  		<title>CoDevs</title>
   
   		<!-- Bootstrap CSS -->
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -36,25 +35,23 @@
   						<span class="icon-bar"></span>
   						<span class="icon-bar"></span>
   					</button>
-  					<a class="navbar-brand" href="#">Indigo</a>
+  					<a class="navbar-brand" href="#">CoDevs</a>
   				</div>
   		
   				<!-- Collect the nav links, forms, and other content for toggling -->
   				<div class="collapse navbar-collapse navbar-ex1-collapse">
   					<ul class="nav navbar-nav navbar-right">
-  						<li><a href="#">Home</a></li>
-  						<li><a href="#">About Us</a></li>
-  						<li><a href="#">Blog</a></li>
+  						<li><a href="home">Home</a></li>
+  						<li><a href="login">Login</a></li>
   						<li class="dropdown">
-  							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+  							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Servizi <b class="caret"></b></a>
   							<ul class="dropdown-menu">
-  								<li><a href="#">Action</a></li>
-  								<li><a href="#">Another action</a></li>
-  								<li><a href="#">Something else here</a></li>
-  								<li><a href="#">Separated link</a></li>
+  								<li><a href="#">Sviluppo software</a></li>
+  								<li><a href="#">Consulenza</a></li>
+  								<li><a href="#">Formazione</a></li>
   							</ul>
   						</li>
-  						<li><a href="#">Contact</a></li>
+  						<li><a href="#">Contatti</a></li>
   					</ul>
   				</div><!-- /.navbar-collapse -->
   			</div>
@@ -66,7 +63,7 @@
   			<div class="container">
   				<div class="row">
   					<div class="col-md-12">
-  						<h2>Indigo Template</h2>
+  						<h2>CoDevs</h2>
   						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ullam consequatur repellat debitis maxime.</p>
   						<ul class="list-inline">
   							<li><a href="#" title="Learn More" class="btn btn-md btn-info">Learn More</a></li>
