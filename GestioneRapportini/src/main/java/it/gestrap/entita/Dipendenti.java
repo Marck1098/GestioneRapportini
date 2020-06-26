@@ -35,6 +35,7 @@ public class Dipendenti implements java.io.Serializable {
 	private String cognome;
 	private Date datanascita;
 	private String codfiscale;
+	private String password;
 	private String residenza;
 	private String numerotelefono;
 	private int stipendioannuo;
@@ -47,7 +48,7 @@ public class Dipendenti implements java.io.Serializable {
 	}
 
 	public Dipendenti(Ruoli ruoli, TipoContratto tipcontratto, String matricola, String nome, String cognome,
-			Date datanascita, String codfiscale, String numerotelefono, int stipendioannuo, Date dataassunzione) {
+			Date datanascita, String codfiscale,String password, String numerotelefono, int stipendioannuo, Date dataassunzione) {
 		this.ruoli = ruoli;
 		this.tipcontratto = tipcontratto;
 		this.matricola = matricola;
@@ -55,13 +56,14 @@ public class Dipendenti implements java.io.Serializable {
 		this.cognome = cognome;
 		this.datanascita = datanascita;
 		this.codfiscale = codfiscale;
+		this.password = password;
 		this.numerotelefono = numerotelefono;
 		this.stipendioannuo = stipendioannuo;
 		this.dataassunzione = dataassunzione;
 	}
 
 	public Dipendenti(Ruoli ruoli, TipoContratto tipcontratto, String matricola, String nome, String cognome,
-			Date datanascita, String codfiscale, String residenza, String numerotelefono, int stipendioannuo,
+			Date datanascita, String codfiscale,String password, String residenza, String numerotelefono, int stipendioannuo,
 			Date dataassunzione, Date datalicenziamento, Set<Comdip> comdips, Set<Rapportini> rapportinis) {
 		this.ruoli = ruoli;
 		this.tipcontratto = tipcontratto;
@@ -70,6 +72,7 @@ public class Dipendenti implements java.io.Serializable {
 		this.cognome = cognome;
 		this.datanascita = datanascita;
 		this.codfiscale = codfiscale;
+		this.password = password;
 		this.residenza = residenza;
 		this.numerotelefono = numerotelefono;
 		this.stipendioannuo = stipendioannuo;
@@ -155,6 +158,15 @@ public class Dipendenti implements java.io.Serializable {
 
 	public void setCodfiscale(String codfiscale) {
 		this.codfiscale = codfiscale;
+	}
+	
+	@Column(name = "password", nullable = false, length = 12)
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Column(name = "residenza", length = 2)

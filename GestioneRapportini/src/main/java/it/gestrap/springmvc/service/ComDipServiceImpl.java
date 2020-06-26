@@ -9,7 +9,6 @@ import it.gestrap.entita.Comdip;
 
 public class ComDipServiceImpl implements ComDipService {
 
-	
 	@Autowired
 	private ComDipDao compDipDao;
 

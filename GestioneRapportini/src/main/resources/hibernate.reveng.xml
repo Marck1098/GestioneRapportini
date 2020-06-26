@@ -6,8 +6,9 @@
   <table-filter match-catalog="gestionerapportini" match-name="comdip"/>
   <table-filter match-catalog="gestionerapportini" match-name="commesse"/>
   <table-filter match-catalog="gestionerapportini" match-name="dipendenti"/>
+  <table-filter match-catalog="gestionerapportini" match-name="profilo"/>
   <table-filter match-catalog="gestionerapportini" match-name="rapportini"/>
   <table-filter match-catalog="gestionerapportini" match-name="ruoli"/>
-  <table-filter match-catalog="gestionerapportini" match-name="tipcontratto"/>
+  <table-filter match-catalog="gestionerapportini" match-name="tipocontratto"/>
   <table-filter match-catalog="gestionerapportini" match-name="tipocommesse"/>
 </hibernate-reverse-engineering>

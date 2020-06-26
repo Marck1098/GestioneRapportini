@@ -14,9 +14,10 @@
         <mapping class="it.gestrap.entita.Dipendenti"/>
         <mapping class="it.gestrap.entita.Comdip"/>
         <mapping class="it.gestrap.entita.Rapportini"/>
-        <mapping class="it.gestrap.entita.Tipcontratto"/>
+        <mapping class="it.gestrap.entita.Tipocontratto"/>
         <mapping class="it.gestrap.entita.Ruoli"/>
         <mapping class="it.gestrap.entita.Tipocommesse"/>
         <mapping class="it.gestrap.entita.Commesse"/>
+        <mapping class="it.gestrap.entita.Profilo"/>
     </session-factory>
 </hibernate-configuration>
