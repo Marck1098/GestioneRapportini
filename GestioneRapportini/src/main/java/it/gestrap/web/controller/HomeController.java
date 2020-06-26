@@ -20,15 +20,15 @@ public class HomeController {
 	 @Autowired
 	    private ClientiService service;
 	 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {
-		return "index";
-	}
+	 @GetMapping("/")
+	 public ModelAndView index() { 
+		 return new ModelAndView("index");
+			 }
 	
 	 @GetMapping("/delete")
 	    public String delete(@RequestParam("idClienti") int theId) {
 		 service.delete(theId);
-	        return "redirect:/index";
+	        return "redirect:/"; 
 	    }
 	 
 	 @GetMapping("/insert")
@@ -44,6 +44,6 @@ public class HomeController {
 		 clienti.setPiva(piva);
 		 
 		 service.save(clienti);
-	        return "redirect:/index";
+	        return "redirect:/";
 	    }
 }
