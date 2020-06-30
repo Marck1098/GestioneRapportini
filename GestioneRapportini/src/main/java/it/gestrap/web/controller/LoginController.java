@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import it.gestrap.springmvc.service.DipendentiService;
+import it.gestrap.springmvc.service.ProfiloService;
 import it.gestrap.entita.Dipendenti;
 
 @Controller
@@ -16,7 +17,9 @@ public class LoginController {
 
     @Autowired
     private DipendentiService service;
-
+    @Autowired
+    private ProfiloService pService;
+    
 	@RequestMapping(value = "/loginPageOk", method = RequestMethod.GET)
 	public ModelAndView login() {
 		ModelAndView model = new ModelAndView(); 
@@ -35,8 +38,18 @@ public class LoginController {
 		
 		if(null!=user) { 
 			if(user.getPassword().equals(password)) {
-				model.setViewName("loginpage");
+				
 				model.addObject("cf", cf);
+				String profilo=pService.get((user.getProfilo()).getId()).getProfilo();
+				System.out.println(profilo);
+				if(profilo.equals("admin")) {
+				model.setViewName("loginpage");
+				
+				}
+				else {
+					model.setViewName("login");
+					model.addObject("msg", "non sei admin");
+				}
 			}
 			else {
 				model.setViewName("login");
