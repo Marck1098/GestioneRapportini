@@ -1,5 +1,5 @@
 package it.gestrap.entita;
-// Generated 23 giu 2020, 22:40:43 by Hibernate Tools 5.1.10.Final
+// Generated 30 giu 2020, 16:48:26 by Hibernate Tools 5.1.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -99,13 +99,5 @@ public class Clienti implements java.io.Serializable {
 	public void setCommesses(Set<Commesse> commesses) {
 		this.commesses = commesses;
 	}
-
-	@Override
-	public String toString() {
-		return "Clienti [id=" + id + ", codice=" + codice + ", nome=" + nome + ", descrizione=" + descrizione
-				+ ", piva=" + piva + ", commesses=" + commesses + "]";
-	}
-	
-	
 
 }

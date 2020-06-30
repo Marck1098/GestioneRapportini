@@ -1,5 +1,5 @@
 package it.gestrap.entita;
-// Generated 23 giu 2020, 22:40:43 by Hibernate Tools 5.1.10.Final
+// Generated 30 giu 2020, 16:48:26 by Hibernate Tools 5.1.10.Final
 
 import java.util.Date;
 import javax.persistence.Column;
