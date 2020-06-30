@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
@@ -69,23 +69,7 @@
 	</nav>
 	<!-- /.navbar-collapse -->
 	
-	<div>
-		<form class="login-form" action="javascript:void(0);">
-			<h1>Login</h1>
-			<div class="form-input-material">
-				<input type="text" name="username" id="username" placeholder=" "
-					autocomplete="off" class="form-control-material" required /> <label
-					for="username">Username</label>
-			</div>
-			<div class="form-input-material">
-				<input type="password" name="password" id="password" placeholder=" "
-					autocomplete="off" class="form-control-material" required /> <label
-					for="password">Password</label>
-			</div>
-			<button type="submit" class="btn btn-primary btn-ghost">Login</button>
-		</form>
-	</div>
-
+	<h1>Benvenuto  ${cf} </h1>
 
 	<!-- START SECTION -->
 	<div class="section background-dark dark-bg">

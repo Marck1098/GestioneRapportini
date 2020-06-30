@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 import it.gestrap.entita.Dipendenti;
 
 @Repository
-public class DipendentiDaoImpl implements DipendentiDao{
+public class DipendentiDaoImpl implements DipendentiDao{ 
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -50,6 +50,14 @@ public class DipendentiDaoImpl implements DipendentiDao{
         Dipendenti dipendente = session.byId(Dipendenti.class).load(id);
         session.delete(dipendente);
     }
+
+	@Override
+	public Dipendenti getCf(String cf) {
+		Session session = sessionFactory.getCurrentSession();
+		String sqlQuery="FROM Dipendenti where codfiscale= :cf";
+		Dipendenti dipendente = (Dipendenti) session.createQuery(sqlQuery,Dipendenti.class).setParameter("cf", cf).uniqueResult();
+		return dipendente;
+	}
     
 	
 }

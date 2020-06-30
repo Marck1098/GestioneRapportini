@@ -16,7 +16,7 @@ import it.gestrap.springmvc.service.ClientiService;
 
 @Controller
 @RequestMapping("/clienti")
-public class ClientiController {
+public class ClientiController { 
 
     @Autowired
     private ClientiService service;
@@ -54,6 +54,8 @@ public class ClientiController {
     	service.delete(theId);
         return "redirect:/customer/list"; 
     }
+    
+    
     
     
 }

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 import it.gestrap.entita.Clienti;
 
 @Repository
-public class ClientiDaoImpl implements ClientiDao {
+public class ClientiDaoImpl implements ClientiDao { 
 
     @Autowired
     private SessionFactory sessionFactory;

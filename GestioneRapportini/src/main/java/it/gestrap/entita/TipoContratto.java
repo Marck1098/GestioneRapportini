@@ -23,7 +23,7 @@ public class TipoContratto implements java.io.Serializable {
 	private Integer id;
 	private String acronimo;
 	private String descrizione;
-	private Set<Dipendenti> dipendentis = new HashSet<Dipendenti>(0);
+	private Set<Dipendenti> dipendenti = new HashSet<Dipendenti>(0);
 
 	public TipoContratto() {
 	}
@@ -36,7 +36,7 @@ public class TipoContratto implements java.io.Serializable {
 	public TipoContratto(String acronimo, String descrizione, Set<Dipendenti> dipendentis) {
 		this.acronimo = acronimo;
 		this.descrizione = descrizione;
-		this.dipendentis = dipendentis;
+		this.dipendenti = dipendentis;
 	}
 
 	@Id
@@ -71,11 +71,11 @@ public class TipoContratto implements java.io.Serializable {
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tipcontratto")
 	public Set<Dipendenti> getDipendentis() {
-		return this.dipendentis;
+		return this.dipendenti;
 	}
 
 	public void setDipendentis(Set<Dipendenti> dipendentis) {
-		this.dipendentis = dipendentis;
+		this.dipendenti = dipendentis;
 	}
 
 }

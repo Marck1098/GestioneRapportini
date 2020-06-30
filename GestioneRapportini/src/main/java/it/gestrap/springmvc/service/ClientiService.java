@@ -13,7 +13,5 @@ public interface ClientiService {
     public Clienti get(int id);
 
     public void delete(int id);
-
-	
-
+    
 }

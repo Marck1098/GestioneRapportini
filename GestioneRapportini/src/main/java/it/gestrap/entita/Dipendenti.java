@@ -23,12 +23,12 @@ import javax.persistence.UniqueConstraint;
  */
 @Entity
 @Table(name = "dipendenti", catalog = "gestionerapportini", uniqueConstraints = {
-		@UniqueConstraint(columnNames = "matricola"),
 		@UniqueConstraint(columnNames = { "matricola", "nome", "cognome", "codfiscale" }) })
 public class Dipendenti implements java.io.Serializable {
 
 	private Integer id;
 	private Ruoli ruoli;
+	private Profilo profilo;
 	private TipoContratto tipcontratto;
 	private String matricola;
 	private String nome;
@@ -47,9 +47,10 @@ public class Dipendenti implements java.io.Serializable {
 	public Dipendenti() {
 	}
 
-	public Dipendenti(Ruoli ruoli, TipoContratto tipcontratto, String matricola, String nome, String cognome,
+	public Dipendenti(Ruoli ruoli, Profilo profilo, TipoContratto tipcontratto, String matricola, String nome, String cognome,
 			Date datanascita, String codfiscale,String password, String numerotelefono, int stipendioannuo, Date dataassunzione) {
 		this.ruoli = ruoli;
+		this.profilo = profilo;
 		this.tipcontratto = tipcontratto;
 		this.matricola = matricola;
 		this.nome = nome;
@@ -62,10 +63,11 @@ public class Dipendenti implements java.io.Serializable {
 		this.dataassunzione = dataassunzione;
 	}
 
-	public Dipendenti(Ruoli ruoli, TipoContratto tipcontratto, String matricola, String nome, String cognome,
+	public Dipendenti(Ruoli ruoli, Profilo profilo, TipoContratto tipcontratto, String matricola, String nome, String cognome,
 			Date datanascita, String codfiscale,String password, String residenza, String numerotelefono, int stipendioannuo,
 			Date dataassunzione, Date datalicenziamento, Set<Comdip> comdips, Set<Rapportini> rapportinis) {
 		this.ruoli = ruoli;
+		this.profilo = profilo;
 		this.tipcontratto = tipcontratto;
 		this.matricola = matricola;
 		this.nome = nome;
@@ -234,4 +236,12 @@ public class Dipendenti implements java.io.Serializable {
 		this.rapportinis = rapportinis;
 	}
 
+	@Column(name = "idprofilo", nullable = false)
+	public Profilo getProfilo() {
+		return profilo;
+	}
+
+	public void setProfilo(Profilo profilo) {
+		this.profilo = profilo;
+	}
 }

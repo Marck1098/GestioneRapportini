@@ -14,4 +14,8 @@ public interface DipendentiDao {
 	Dipendenti get(int id);
 
 	void delete(int id);
+	
+
+	Dipendenti getCf(String cf);
+	
 }
