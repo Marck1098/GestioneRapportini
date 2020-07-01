@@ -15,11 +15,11 @@ import it.gestrap.entita.Dipendenti;
 @Controller
 public class LoginController {
 
-    @Autowired
-    private DipendentiService service;
-    @Autowired
-    private ProfiloService pService;
-    
+	@Autowired
+	private DipendentiService service;
+	@Autowired
+	private ProfiloService pService;
+
 	@RequestMapping(value = "/loginPageOk", method = RequestMethod.GET)
 	public ModelAndView login() {
 		ModelAndView model = new ModelAndView(); 
@@ -27,29 +27,34 @@ public class LoginController {
 		return model;
 	}
 
-	@RequestMapping(value = "/loginpage", method = RequestMethod.POST)
+	@RequestMapping(value = "/verifica", method = RequestMethod.POST)
 	public ModelAndView doLogin(@RequestParam("cf") String cf,
 			@RequestParam("password") String password) {
 		ModelAndView model = new ModelAndView();
+
 		System.out.println("cf: "+ cf);
 		System.out.println("Password: "+ password);
-		
+
 		Dipendenti user= service.getCf(cf);
-		
+
 		if(null!=user) { 
 			if(user.getPassword().equals(password)) {
-				
+
 				model.addObject("cf", cf);
 				String profilo=pService.get((user.getProfilo()).getId()).getProfilo();
 				System.out.println(profilo);
-				if(profilo.equals("admin")) {
-				model.setViewName("loginpage");
 				
+				if(profilo.equals("admin")) {
+					model.setViewName("admin");
+				}
+				else if(profilo.equals("user")) {
+					model.setViewName("user");
 				}
 				else {
 					model.setViewName("login");
-					model.addObject("msg", "non sei admin");
+					model.addObject("msg", "Non hai assegnato alcun ruolo");
 				}
+				
 			}
 			else {
 				model.setViewName("login");

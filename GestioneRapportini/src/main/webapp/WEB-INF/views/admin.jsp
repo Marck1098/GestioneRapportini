@@ -1,7 +1,6 @@
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
 <!DOCTYPE html>
 <html lang="">
@@ -26,7 +25,7 @@
 	rel='stylesheet' type='text/css'>
 <!-- Style -->
 <link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
-<link href="<c:url value="/resources/css/style.css" />"  rel="stylesheet">
+<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +34,9 @@
   			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   		<![endif]-->
 </head>
+
 <body>
+
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -54,39 +55,21 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="home">Home</a></li>
 					<li><a href="login">Login</a></li>
-					<li><a href="contatti">Contatti</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">Servizi <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="list">Liste</a></li>
+							<li><a href="rapportini">Rapportini</a></li>
+							<li><a href="commesse">Commesse</a></li>
+						</ul></li>
+					<li><a href="#">Contatti</a></li>
 				</ul>
 			</div>
-			<!-- /.navbar-collapse -->
 		</div>
 	</nav>
+	<!-- /.navbar-collapse -->
 
-
-
-	<form class="login-form" action="verifica" method="post">
-		<h1>Login</h1>
-		<label for="msg"> <%
-						Object msg = request.getAttribute("msg");
-			   			if(msg!=null && msg!=""){
-			   			out.println("<label ><font color=\"	#F62817\"><b>"+msg+"</b></font></label> ");
-			   			}
-						%>
-		</label> <font color="black">
-			<div class="form-input-material">
-				<font color="white"> <label for="username">Cf</label></font> <br>
-				<input type="text" name="cf" id="cf"
-					placeholder="inserisci codice fiscale" autocomplete="off"
-					class="form-control-material" required />
-			</div> <br>
-			<div class="form-input-material">
-				<font color="white"> <label for="password">Password</label>
-				</font> <br> <input type="password" name="password" id="password"
-					placeholder="inserisci password" autocomplete="off"
-					class="form-control-material" required />
-			</div> <br>
-			<button type="submit" class="btn btn-primary btn-ghost">Login</button>
-		</font>
-	</form>
+	<h1>Benvenuto ${cf}</h1>
 
 	<!-- START SECTION -->
 	<div class="section background-dark dark-bg">
@@ -135,7 +118,7 @@
 				<div
 					class="col-md-12 margin-top-md text-center font-size-sm text-upercase">
 					<p>
-						© <a href="http://nomadtheme.com" title="nomadtheme"><strong>Nomad
+						Â© <a href="http://nomadtheme.com" title="nomadtheme"><strong>Nomad
 								Theme</strong></a>. Images: <a href="http://picjumbo.com" title="PicJumbo"><strong>Pic
 								Jumbo</strong></a>. By: <a href="http://freebootstraptemplate.com"
 							title="Free Bootstrap Template"><strong>Free
@@ -147,13 +130,10 @@
 	</div>
 	<!--/.section -->
 
-	<!-- jQuery -->
-	<script src="//code.jquery.com/jquery.js"></script>
-	<!-- Bootstrap JavaScript -->
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-		crossorigin="anonymous"></script>
 
-</body>
+		<!-- jQuery -->
+  		<script src="//code.jquery.com/jquery.js"></script>
+  		<!-- Bootstrap JavaScript -->
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  	</body>
 </html>

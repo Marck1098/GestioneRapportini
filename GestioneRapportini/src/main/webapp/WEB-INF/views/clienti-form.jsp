@@ -19,37 +19,41 @@
     Example</h2>
    <div class="panel panel-info">
     <div class="panel-heading">
-     <div class="panel-title">Add Customer</div>
+     <div class="panel-title">Add Clienti</div>
     </div>
     <div class="panel-body">
-     <form:form action="saveCustomer" cssClass="form-horizontal"
+     <form:form action="saveClienti" cssClass="form-horizontal"
       method="post" modelAttribute="customer">
 
-      <!-- need to associate this data with customer id -->
+      <!-- need to associate this data with client id -->
+      
       <form:hidden path="id" />
 
       <div class="form-group">
-       <label for="firstname" class="col-md-3 control-label">First
-        Name</label>
+       <label for="codice" class="col-md-3 control-label">codice</label>
        <div class="col-md-9">
-        <form:input path="firstName" cssClass="form-control" />
-       </div>
-      </div>
-      <div class="form-group">
-       <label for="lastname" class="col-md-3 control-label">Last
-        Name</label>
-       <div class="col-md-9">
-        <form:input path="lastName" cssClass="form-control" />
+        <form:input path="codice" cssClass="form-control" />
        </div>
       </div>
 
       <div class="form-group">
-       <label for="email" class="col-md-3 control-label">Email</label>
+       <label for="nome" class="col-md-3 control-label">nome</label>
        <div class="col-md-9">
-        <form:input path="email" cssClass="form-control" />
+        <form:input path="nome" cssClass="form-control" />
        </div>
       </div>
-
+<div class="form-group">
+       <label for="descrizione" class="col-md-3 control-label">descrizione</label>
+       <div class="col-md-9">
+        <form:input path="descrizione" cssClass="form-control" />
+       </div>
+      </div>
+      <div class="form-group">
+       <label for="piva" class="col-md-3 control-label">piva</label>
+       <div class="col-md-9">
+        <form:input path="piva" cssClass="form-control" />
+       </div>
+      </div>
       <div class="form-group">
        <!-- Button -->
        <div class="col-md-offset-3 col-md-9">

@@ -15,18 +15,11 @@ import it.gestrap.entita.Clienti;
 import it.gestrap.springmvc.service.ClientiService;
 
 @Controller
-@RequestMapping("/clienti")
+@RequestMapping("/cliente")
 public class ClientiController { 
 
     @Autowired
     private ClientiService service;
-    
-    @GetMapping("/list")
-    public String listCustomers(Model theModel) {
-        List<Clienti> clienti = service.getAll(); 
-        theModel.addAttribute("clienti", clienti);
-        return "list-clienti"; 
-    }
 
     @GetMapping("/showForm")
     public String showFormForAdd(Model theModel) {
@@ -35,10 +28,10 @@ public class ClientiController {
         return "customer-form";
     }
 
-    @PostMapping("/save")
-    public String saveCustomer(@ModelAttribute("dipendenti") Clienti theCustomer) {
-    	service.save(theCustomer);
-        return "inedx";
+    @PostMapping("/saveClienti")
+    public String saveCustomer(@ModelAttribute("dipendenti") Clienti cliente) {
+    	service.save(cliente);
+        return "redirect:/list/clienti";
     }
 
     @GetMapping("/updateForm")
@@ -46,13 +39,13 @@ public class ClientiController {
         Model theModel) {
     	Clienti cliente = (Clienti) service.get(theId);
         theModel.addAttribute("customer", cliente);
-        return "customer-form";
+        return "clienti-form";
     }
 
     @GetMapping("/delete")
     public String deleteCustomer(@RequestParam("clienteId") int theId) {
     	service.delete(theId);
-        return "redirect:/customer/list"; 
+        return "redirect:/list/clienti"; 
     }
     
     

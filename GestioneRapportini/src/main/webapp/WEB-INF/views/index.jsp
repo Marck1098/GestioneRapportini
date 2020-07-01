@@ -35,7 +35,7 @@
   						<span class="icon-bar"></span>
   						<span class="icon-bar"></span>
   					</button>
-  					<a class="navbar-brand" href="#">CoDevs</a>
+  					<a class="navbar-brand" href="home">CoDevs</a>
   				</div>
   		
   				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,14 +43,6 @@
   					<ul class="nav navbar-nav navbar-right">
   						<li><a href="home">Home</a></li>
   						<li><a href="login">Login</a></li>
-  						<li class="dropdown">
-  							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Servizi <b class="caret"></b></a>
-  							<ul class="dropdown-menu">
-  								<li><a href="#">Sviluppo software</a></li>
-  								<li><a href="#">Consulenza</a></li>
-  								<li><a href="#">Formazione</a></li>
-  							</ul>
-  						</li>
   						<li><a href="#">Contatti</a></li>
   					</ul>
   				</div><!-- /.navbar-collapse -->

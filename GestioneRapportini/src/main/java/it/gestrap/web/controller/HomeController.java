@@ -41,6 +41,12 @@ public class HomeController {
 	        return "redirect:/";  
 	    }
 	 
+	 @GetMapping("/list")
+	    public String delete() {
+	        return "liste";  
+	    }
+	 
+	 
 	 @GetMapping("/insert")
 	    public String insert(
 	    		@RequestParam("codice") String codice,

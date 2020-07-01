@@ -1,10 +1,14 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+	
 
 <!DOCTYPE html>
 <html lang="">
 <head>
+	<link rel="stylesheet" href="http://code.ionicframework.com/1.0.0/css/ionic.css" />
+	<script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,7 +51,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">CoDevs</a>
+				<a class="navbar-brand" href="home">CoDevs</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,9 +62,9 @@
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Servizi <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Sviluppo software</a></li>
-							<li><a href="#">Consulenza</a></li>
-							<li><a href="#">Formazione</a></li>
+							<li><a href="list">List</a></li>
+							<li><a href="rapportini">Rapportini</a></li>
+							<li><a href="commesse">Commesse</a></li>
 						</ul></li>
 					<li><a href="#">Contatti</a></li>
 				</ul>
@@ -68,8 +72,8 @@
 		</div>
 	</nav>
 	<!-- /.navbar-collapse -->
-	
-	<h1>Benvenuto  ${cf} </h1>
+
+	<a href="list/clienti" id="button-1" class="button button-block button-positive">Clienti</a>
 
 	<!-- START SECTION -->
 	<div class="section background-dark dark-bg">
@@ -130,20 +134,9 @@
 	</div>
 	<!--/.section -->
 
-	<!-- jQuery -->
-	<script src="//code.jquery.com/jquery.js"></script>
-	<!-- Bootstrap JavaScript -->
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-		crossorigin="anonymous"></script>
-
-	<!-- jQuery -->
-	<script src="//code.jquery.com/jquery.js"></script>
-	<!-- Bootstrap JavaScript -->
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-		crossorigin="anonymous"></script>
-</body>
+		<!-- jQuery -->
+  		<script src="//code.jquery.com/jquery.js"></script>
+  		<!-- Bootstrap JavaScript -->
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  	</body>
 </html>
