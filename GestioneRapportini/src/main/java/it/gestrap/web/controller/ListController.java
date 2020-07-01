@@ -15,7 +15,6 @@ import it.gestrap.entita.Clienti;
 import it.gestrap.springmvc.service.ClientiService;
 
 @Controller
-@RequestMapping("/list")
 public class ListController {
 
 	    @Autowired

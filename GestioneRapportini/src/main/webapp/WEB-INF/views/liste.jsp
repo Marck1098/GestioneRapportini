@@ -7,6 +7,9 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="http://code.ionicframework.com/1.0.0/css/ionic.css" />
 	<script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
 <meta charset="utf-8">
@@ -73,8 +76,9 @@
 	</nav>
 	<!-- /.navbar-collapse -->
 
-	<a href="list/clienti" id="button-1" class="button button-block button-positive">Clienti</a>
-
+	<a href="clienti" id="button-2" class="ui-btn ui-corner-all ui-btn-a">Clienti</a>
+	
+	
 	<!-- START SECTION -->
 	<div class="section background-dark dark-bg">
 		<div class="container">

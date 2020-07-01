@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import it.gestrap.entita.Clienti;
 import it.gestrap.springmvc.service.ClientiService;
@@ -23,29 +25,48 @@ public class ClientiController {
 
     @GetMapping("/showForm")
     public String showFormForAdd(Model theModel) {
-    	Clienti theCustomer = new Clienti();
-        theModel.addAttribute("cliente", theCustomer);
-        return "customer-form";
+    	Clienti cliente = new Clienti();
+        theModel.addAttribute("cliente", cliente);
+        return "clienti-form";
     }
 
-    @PostMapping("/saveClienti")
-    public String saveCustomer(@ModelAttribute("dipendenti") Clienti cliente) {
-    	service.save(cliente);
-        return "redirect:/list/clienti";
+    @RequestMapping(value = "/saveClienti", method = RequestMethod.POST)
+    public ModelAndView saveCustomer(@ModelAttribute("dipendenti") Clienti cliente ) {
+    	ModelAndView theModel=new ModelAndView();
+    	try {
+    	if(cliente!=null && 
+    			!cliente.getNome().equals("") && 
+    			!cliente.getCodice().equals("") && 
+    			!cliente.getDescrizione().equals("") && 
+    			!cliente.getPiva().equals("")) {
+    		service.save(cliente);
+    		 theModel.setViewName("redirect:/clienti");
+    	}
+    	else {
+    		theModel.setViewName("redirect:/clienti/showForm");
+    		theModel.addObject("cliente", cliente);
+    	}
+    	}
+    	catch(Exception e) {
+    		theModel.setViewName("clienti-form");
+    		theModel.addObject("msg", "Campo già esistente");
+    		theModel.addObject("cliente", cliente);
+    	}
+        return theModel;
     }
 
     @GetMapping("/updateForm")
     public String showFormForUpdate(@RequestParam("clienteId") int theId,
         Model theModel) {
     	Clienti cliente = (Clienti) service.get(theId);
-        theModel.addAttribute("customer", cliente);
+        theModel.addAttribute("cliente", cliente);
         return "clienti-form";
     }
 
     @GetMapping("/delete")
     public String deleteCustomer(@RequestParam("clienteId") int theId) {
     	service.delete(theId);
-        return "redirect:/list/clienti"; 
+        return "redirect:/clienti"; 
     }
     
     
