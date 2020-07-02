@@ -103,11 +103,11 @@
 				<div class="panel-body">
 					<table class="table table-striped table-bordered">
 						<tr>
-							<th>id</th>
-							<th>codice</th>
-							<th>nome</th>
-							<th>descrizione</th>
-							<th>p.iva</th>
+							<th>Id</th>
+							<th>Codice</th>
+							<th>Nome</th>
+							<th>Descrizione</th>
+							<th>Partita Iva</th>
 							<th></th>
 						</tr>
 
@@ -133,7 +133,7 @@
 								<td>
 									<!-- display the update link --> <a href="${updateLink}">Aggiorna</a>
 									| <a href="${deleteLink}"
-									onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Cancella</a>
+									onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Elimina</a>
 								</td>
 
 							</tr>
