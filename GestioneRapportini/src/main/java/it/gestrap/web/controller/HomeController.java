@@ -12,54 +12,56 @@ import org.springframework.web.servlet.ModelAndView;
 
 import it.gestrap.springmvc.service.ClientiServiceImpl;
 import it.gestrap.entita.Clienti;
+import it.gestrap.entita.Utente;
 import it.gestrap.springmvc.service.ClientiService;
 
 @Controller
 public class HomeController {
 
-	 @Autowired
-	    private ClientiService service;
-	 
-	 @GetMapping("/")
-	 public ModelAndView index() { 
-		 return new ModelAndView("index"); 
-			 }
-	 
-	 @GetMapping("/login")
-	 public ModelAndView login() { 
-		 return new ModelAndView("login");
-			 }
-	 
-	 @GetMapping("/home")
-	 public ModelAndView home() { 
-		 return new ModelAndView("index");
-			 }
-	
-	 @GetMapping("/delete")
-	    public String delete(@RequestParam("idClienti") int theId) {
-		 service.delete(theId);
-	        return "redirect:/";  
-	    }
-	 
-	 @GetMapping("/list")
-	    public String delete() {
-	        return "liste";  
-	    }
-	 
-	 
-	 @GetMapping("/insert")
-	    public String insert(
-	    		@RequestParam("codice") String codice,
-	    		@RequestParam("nome") String nome,
-	    		@RequestParam("desc") String desc,
-	    		@RequestParam("piva") String piva ) {
-		 Clienti clienti = new Clienti();
-		 clienti.setCodice(codice);
-		 clienti.setNome(nome);
-		 clienti.setDescrizione(desc);
-		 clienti.setPiva(piva);
-		 
-		 service.save(clienti);
-	        return "redirect:/";
-	    }
+	@Autowired
+	private ClientiService service;
+
+	@GetMapping("/")
+	public ModelAndView index() { 
+		return new ModelAndView("index"); 
+	}
+
+	@GetMapping("/login")
+	public ModelAndView login() { 
+		return new ModelAndView("login");
+	}
+
+	@GetMapping("/home")
+	public ModelAndView home() { 
+		return new ModelAndView("index");
+	}
+
+	@GetMapping("/delete")
+	public String delete(@RequestParam("idClienti") int theId) {
+		service.delete(theId);
+		return "redirect:/";  
+	}
+
+
+	@GetMapping("/list")
+	public String delete() {
+		return "liste";  
+	}
+
+
+	@GetMapping("/insert")
+	public String insert(
+			@RequestParam("codice") String codice,
+			@RequestParam("nome") String nome,
+			@RequestParam("desc") String desc,
+			@RequestParam("piva") String piva ) {
+		Clienti clienti = new Clienti();
+		clienti.setCodice(codice);
+		clienti.setNome(nome);
+		clienti.setDescrizione(desc);
+		clienti.setPiva(piva);
+
+		service.save(clienti);
+		return "redirect:/";
+	}
 }

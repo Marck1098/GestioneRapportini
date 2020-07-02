@@ -20,56 +20,56 @@ import it.gestrap.springmvc.service.ClientiService;
 @RequestMapping("/cliente")
 public class ClientiController { 
 
-    @Autowired
-    private ClientiService service;
+	@Autowired
+	private ClientiService service;
 
-    @GetMapping("/showForm")
-    public String showFormForAdd(Model theModel) {
-    	Clienti cliente = new Clienti();
-        theModel.addAttribute("cliente", cliente);
-        return "clienti-form";
-    }
+	@GetMapping("/showForm")
+	public String showFormForAdd(Model theModel) {
+		Clienti cliente = new Clienti();
+		theModel.addAttribute("cliente", cliente);
+		return "clienti-form";
+	}
 
-    @RequestMapping(value = "/saveClienti", method = RequestMethod.POST)
-    public ModelAndView saveCustomer(@ModelAttribute("dipendenti") Clienti cliente ) {
-    	ModelAndView theModel=new ModelAndView();
-    	try {
-    	if(cliente!=null && 
-    			!cliente.getNome().equals("") && 
-    			!cliente.getCodice().equals("") && 
-    			!cliente.getDescrizione().equals("") && 
-    			!cliente.getPiva().equals("")) {
-    		service.save(cliente);
-    		 theModel.setViewName("redirect:/clienti");
-    	}
-    	else {
-    		theModel.setViewName("redirect:/clienti/showForm");
-    		theModel.addObject("cliente", cliente);
-    	}
-    	}
-    	catch(Exception e) {
-    		theModel.setViewName("clienti-form");
-    		theModel.addObject("msg", "Campo già esistente");
-    		theModel.addObject("cliente", cliente);
-    	}
-        return theModel;
-    }
+	@RequestMapping(value = "/saveClienti", method = RequestMethod.POST)
+	public ModelAndView saveCustomer(@ModelAttribute("dipendenti") Clienti cliente ) {
+		ModelAndView theModel=new ModelAndView();
+		try {
+			if(cliente!=null && 
+					!cliente.getNome().equals("") && 
+					!cliente.getCodice().equals("") && 
+					!cliente.getDescrizione().equals("") && 
+					!cliente.getPiva().equals("")) {
+				service.save(cliente);
+				theModel.setViewName("redirect:/clienti");
+			}
+			else {
+				theModel.setViewName("redirect:/clienti/showForm");
+				theModel.addObject("cliente", cliente);
+			}
+		}
+		catch(Exception e) {
+			theModel.setViewName("clienti-form");
+			theModel.addObject("msg", "Campo già esistente");
+			theModel.addObject("cliente", cliente);
+		}
+		return theModel;
+	}
 
-    @GetMapping("/updateForm")
-    public String showFormForUpdate(@RequestParam("clienteId") int theId,
-        Model theModel) {
-    	Clienti cliente = (Clienti) service.get(theId);
-        theModel.addAttribute("cliente", cliente);
-        return "clienti-form";
-    }
+	@GetMapping("/updateForm")
+	public String showFormForUpdate(@RequestParam("clienteId") int theId,
+			Model theModel) {
+		Clienti cliente = (Clienti) service.get(theId);
+		theModel.addAttribute("cliente", cliente);
+		return "clienti-form";
+	}
 
-    @GetMapping("/delete")
-    public String deleteCustomer(@RequestParam("clienteId") int theId) {
-    	service.delete(theId);
-        return "redirect:/clienti"; 
-    }
-    
-    
-    
-    
+	@GetMapping("/delete")
+	public String deleteCustomer(@RequestParam("clienteId") int theId) {
+		service.delete(theId);
+		return "redirect:/clienti"; 
+	}
+
+
+
+
 }

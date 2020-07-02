@@ -7,8 +7,7 @@ a {
 	transition: all .3s;
 }
 
-/*	FORMS
-*/
+/*	FORMS */
 .form-control {
 	border: 2px solid #cbd0d3;
 	border-radius: 0;
@@ -17,8 +16,7 @@ a {
 	height: 45px;
 }
 
-/*	EXTRA CLASSES
-*/
+/*	EXTRA CLASSES */
 .margin-zero {
 	margin: 0;
 }
@@ -195,7 +193,7 @@ a {
 /*	NAVBAR
 */
 .navbar-default {
-	background-color: #f6f8f9;
+	background-color: #eee;
 	border: none;
 	margin-bottom: 0;
 }

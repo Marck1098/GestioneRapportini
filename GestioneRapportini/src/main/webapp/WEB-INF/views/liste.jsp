@@ -2,37 +2,60 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	
+
 
 <!DOCTYPE html>
 <html lang="">
 <head>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<link rel="stylesheet" href="http://code.ionicframework.com/1.0.0/css/ionic.css" />
-	<script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
+
+<!-- Style icon -->
+<link href="<c:url value="/resources/css/icon.css" />" rel="stylesheet">
+<!-- end CSS -->
+
+<!--Metadata-->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CoDevs</title>
+<!-- end metadata -->
 
+
+<!-- CSS -->
+<!--Css jquery.mobile-->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
 	crossorigin="anonymous">
 <!-- Google Fonts -->
-<link
-	href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700'
-	rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 <!-- Font Awesome -->
 <link
 	href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
 	rel='stylesheet' type='text/css'>
+<!-- end CSS -->
+
 <!-- Style -->
 <link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
+<!-- end CSS -->
+
+<!--Js-->
+<!-- jQuery -->
+	<script src="//code.jquery.com/jquery.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+		crossorigin="anonymous"></script>
+<!-- end JS -->
+
+
+<title>CoDevs</title>
+
+
+
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,93 +77,100 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="home">CoDevs</a>
+				<a class="navbar-brand" href="list">CoDevs</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="home">Home</a></li>
-					<li><a href="login">Login</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">Servizi <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="list">List</a></li>
-							<li><a href="rapportini">Rapportini</a></li>
-							<li><a href="commesse">Commesse</a></li>
-						</ul></li>
-					<li><a href="#">Contatti</a></li>
+					<li><a href="list">Liste</a></li>
+					<li><a href="logout">Logout</a></li>
+					<li><a href="contatti">Contatti</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- /.navbar-collapse -->
 
-	<a href="clienti" id="button-2" class="ui-btn ui-corner-all ui-btn-a">Clienti</a>
 	
-	
+
+	<table width=100%  style="margin-bottom: 40px;">
+		<tr>
+			<th></th>
+			<th><center>
+					<h4>Seleziona la lista che vuoi visualizzare</h4>
+				</center></th>
+			<th></th>
+		</tr>
+
+
+		<tr>
+			<td width=20%></td>
+			<td><a href="dipendenti" id="button-2"
+				class="ui-btn ui-corner-all ui-btn-a">Dipendenti</a></td>
+			<td width=20%></td>
+		</tr>
+
+		<tr>
+			<td width=20%></td>
+			<td><a href="clienti" id="button-2"
+				class="ui-btn ui-corner-all ui-btn-a">Clienti</a></td>
+			<td width=20%></td>
+		</tr>
+
+		<tr>
+			<td width=20%></td>
+			<td><a href="rapportini" id="button-2"
+				class="ui-btn ui-corner-all ui-btn-a">Rapportini</a></td>
+			<td width=20%></td>
+		</tr>
+
+		<tr>
+			<td width=20%></td>
+			<td><a href="commesse" id="button-2"
+				class="ui-btn ui-corner-all ui-btn-a">Commesse</a></td>
+			<td width=20%></td>
+		</tr>
+
+	</table>
+
+
+
+
 	<!-- START SECTION -->
 	<div class="section background-dark dark-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
-					<h3
-						class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">About
-						Us</h3>
-					<p>Sed egestas, ante et vulputate volutpat, eros pede semper
-						est, vitae luctus metus libero eu augue. Morbi purus libero,
-						faucibus adipiscing, commodo quis, gravida id, est.</p>
-					<p>Sed tempus feugiat adipiscing nisl cursus aliquam dolore.</p>
-				</div>
-				<div class="col-md-4 col-md-offset-1">
-					<h3
-						class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">USA
-						Office</h3>
-					<address>
-						<strong>Twitter, Inc.</strong><br> 1355 Market Street, Suite
-						900<br> San Francisco, CA 94103<br> <abbr title="Phone">P:</abbr>
-						(123) 456-7890
-					</address>
-					<address>
-						<strong>Full Name</strong><br> <a href="mailto:#">first.last@example.com</a>
-					</address>
-				</div>
-
-				<div class="col-md-4">
-					<h3
-						class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">UK
-						Office</h3>
-					<address>
-						<strong>Twitter, Inc.</strong><br> 1355 Market Street, Suite
-						900<br> San Francisco, CA 94103<br> <abbr title="Phone">P:</abbr>
-						(123) 456-7890
-					</address>
-					<address>
-						<strong>Full Name</strong><br> <a href="mailto:#">first.last@example.com</a>
-					</address>
-				</div>
-				<div class="col-md-12 margin-top-md margin-bottom-md"
-					style="opacity: .2;">
-					<hr />
-				</div>
-				<div
-					class="col-md-12 margin-top-md text-center font-size-sm text-upercase">
-					<p>
-						Â© <a href="http://nomadtheme.com" title="nomadtheme"><strong>Nomad
-								Theme</strong></a>. Images: <a href="http://picjumbo.com" title="PicJumbo"><strong>Pic
-								Jumbo</strong></a>. By: <a href="http://freebootstraptemplate.com"
-							title="Free Bootstrap Template"><strong>Free
-								Bootstrap Template</strong></a>.
-					</p>
-				</div>
+				<table width=100% >
+					<tr>
+						<td width=33.3% align="center">
+						<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Informazioni</h3>
+								<p>Azienda leader del<br> settore nella gestione<br> aziendale e
+									della<br> consulenza.</p>
+						</td>
+						<td width=33.3% align="center">
+								<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Sede
+									Italiana</h3>
+								<address>
+									Via Principe di Piemonte, 19<br> Casoria, NA, 80026<br>
+									<abbr title="Phone">T: </abbr> (123) 456-7890 <br> <a
+										href="mailto:#">codevs@newsoft.com</a>
+								</address>
+						</td>
+						<td width=33.3% align="center">
+							<!-- Add font awesome icons --> 
+							<a href="#" class="fa fa-facebook"></a> 
+							<a href="#" class="fa fa-twitter"></a>
+							<br>
+							
+							 <a href="#" class="fa fa-instagram"></a>
+							<a href="#" class="fa fa-linkedin"></a>
+						</td>
+				</table>
 			</div>
 		</div>
 	</div>
 	<!--/.section -->
 
-		<!-- jQuery -->
-  		<script src="//code.jquery.com/jquery.js"></script>
-  		<!-- Bootstrap JavaScript -->
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  	</body>
+</body>
 </html>

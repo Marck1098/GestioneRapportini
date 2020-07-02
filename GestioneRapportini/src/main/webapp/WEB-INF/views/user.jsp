@@ -1,6 +1,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 
 <!DOCTYPE html>
 <html lang="">
@@ -53,22 +54,23 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="home">Home</a></li>
-					<li><a href="login">Login</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">Servizi <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="rapportini">Rapportini</a></li>
-							<li><a href="commesse">Commesse</a></li>
-						</ul></li>
-					<li><a href="#">Contatti</a></li>
+					<li><a href="list">Liste</a></li>
+					<li><a href="logout">Logout</a></li>
+					<li><a href="contatti">Contatti</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- /.navbar-collapse -->
 	
-	<h1>Benvenuto  ${cf} </h1>
+	<!-- START SECTION -->
+	<table width=100%>
+		<tr>
+			<td width=10%></td>
+			<td><h1>Benvenuto ${cf}</h1></td>
+		</tr>
+	</table>
+	<!--/.section -->
 
 	<!-- START SECTION -->
 	<div class="section background-dark dark-bg">

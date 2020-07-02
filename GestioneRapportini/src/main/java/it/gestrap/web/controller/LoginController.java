@@ -35,15 +35,14 @@ public class LoginController {
 		System.out.println("cf: "+ cf);
 		System.out.println("Password: "+ password);
 
-		Dipendenti user= service.getCf(cf);
+		Dipendenti dipendete= service.getCf(cf);
 
-		if(null!=user) { 
-			if(user.getPassword().equals(password)) {
+		if(null!=dipendete) { 
+			if(dipendete.getPassword().equals(password)) {
 
 				model.addObject("cf", cf);
-				String profilo=pService.get((user.getProfilo()).getId()).getProfilo();
-				System.out.println(profilo);
-				
+				String profilo=pService.get((dipendete.getProfilo()).getId()).getProfilo();
+
 				if(profilo.equals("admin")) {
 					model.setViewName("admin");
 				}
@@ -54,7 +53,7 @@ public class LoginController {
 					model.setViewName("login");
 					model.addObject("msg", "Non hai assegnato alcun ruolo");
 				}
-				
+
 			}
 			else {
 				model.setViewName("login");
