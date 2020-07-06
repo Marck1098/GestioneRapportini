@@ -61,9 +61,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="home">Home</a></li>
-					<li><a href="login">Login</a></li>
-					<li><a href="contatti">Contatti</a></li>
+				
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -85,13 +83,13 @@
 				<font color="white"> <label for="username">Codice Fiscale</label></font> <br>
 				<input type="text" name="cf" id="cf"
 					placeholder="inserisci codice fiscale" autocomplete="off"
-					class="form-control-material" required />
+					class="form-control-material"  th:field="*{cf}" required />
 			</div> <br>
 			<div class="form-input-material">
 				<font color="white"> <label for="password">Password</label>
 				</font> <br> <input type="password" name="password" id="password"
 					placeholder="inserisci password" autocomplete="off"
-					class="form-control-material" required />
+					class="form-control-material"  th:field="*{password}"required />
 			</div> <br>
 			<button type="submit" class="btn btn-primary btn-ghost">Login</button>
 		</font>

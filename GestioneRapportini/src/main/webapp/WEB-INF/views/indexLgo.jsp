@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
+
 <!--Metadata-->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +43,6 @@
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 	crossorigin="anonymous"></script>
 <!-- end JS -->
-
 
 <title>CoDevs</title>
 
@@ -86,7 +86,6 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					
 					<li><a href="login">Login</a></li>
 
 				</ul>
@@ -102,12 +101,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
+					<li><font color="white"><strong>Logout effettuato con successo</strong></font></li>
 					<h2>CoDevs</h2>
-					<p class="lead">CoDevs è un'azienda di consulenza specializzata
-						nel mondo dell'IT. Offriamo servizi alle più grandi aziende
-						residenti oggi nel mercato.</p>
-					<ul class="list-inline">
-					</ul>
+					<font color="white">
+						<p class="lead">CoDevs è un'azienda di consulenza
+							specializzata nel mondo dell'IT. Offriamo servizi alle più grandi
+							aziende residenti oggi nel mercato.</p>
+						<ul class="list-inline">
+						</ul>
 				</div>
 			</div>
 		</div>
@@ -210,30 +211,31 @@
 	<div class="section background-dark dark-bg">
 		<div class="container">
 			<div class="row">
-				<table width=100% >
+				<table width=100%>
 					<tr>
 						<td width=33.3% align="center">
-						<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Informazioni</h3>
-								<p>Azienda leader del<br> settore nella gestione<br> aziendale e
-									della<br> consulenza.</p>
+							<h3
+								class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Informazioni</h3>
+							<p>
+								Azienda leader del<br> settore nella gestione<br>
+								aziendale e della<br> consulenza.
+							</p>
 						</td>
 						<td width=33.3% align="center">
-								<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Sede
-									Italiana</h3>
-								<address>
-									Via Principe di Piemonte, 19<br> Casoria, NA, 80026<br>
-									<abbr title="Phone">T: </abbr> (123) 456-7890 <br> <a
-										href="mailto:#">codevs@newsoft.com</a>
-								</address>
+							<h3
+								class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Sede
+								Italiana</h3>
+							<address>
+								Via Principe di Piemonte, 19<br> Casoria, NA, 80026<br>
+								<abbr title="Phone">T: </abbr> (123) 456-7890 <br> <a
+									href="mailto:#">codevs@newsoft.com</a>
+							</address>
 						</td>
 						<td width=33.3% align="center">
-							<!-- Add font awesome icons --> 
-							<a href="#" class="fa fa-facebook"></a> 
-							<a href="#" class="fa fa-twitter"></a>
-							<br>
-							
-							 <a href="#" class="fa fa-instagram"></a>
-							<a href="#" class="fa fa-linkedin"></a>
+							<!-- Add font awesome icons --> <a href="#"
+							class="fa fa-facebook"></a> <a href="#" class="fa fa-twitter"></a>
+							<br> <a href="#" class="fa fa-instagram"></a> <a href="#"
+							class="fa fa-linkedin"></a>
 						</td>
 				</table>
 			</div>

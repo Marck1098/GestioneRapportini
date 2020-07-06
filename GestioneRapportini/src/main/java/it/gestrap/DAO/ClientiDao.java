@@ -15,5 +15,5 @@ public interface ClientiDao {
     public Clienti get(int theId);
 
     public void delete(int theId);
-    
+    /*ciao*/
 }

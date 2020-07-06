@@ -99,7 +99,7 @@ public class Dipendenti implements java.io.Serializable {
 		this.id = id;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idprofilo", nullable = false)
 	public Profilo getProfilo() {
 		return this.profilo;
@@ -109,7 +109,7 @@ public class Dipendenti implements java.io.Serializable {
 		this.profilo = profilo;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idruoli", nullable = false)
 	public Ruoli getRuoli() {
 		return this.ruoli;
@@ -119,7 +119,7 @@ public class Dipendenti implements java.io.Serializable {
 		this.ruoli = ruoli;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idtipcontratto", nullable = false)
 	public TipoContratto getTipocontratto() {
 		return this.tipocontratto;

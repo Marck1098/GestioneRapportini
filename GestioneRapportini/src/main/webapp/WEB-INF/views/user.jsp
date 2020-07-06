@@ -56,7 +56,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="list">Liste</a></li>
 					<li><a href="logout">Logout</a></li>
-					<li><a href="contatti">Contatti</a></li>
+					
 				</ul>
 			</div>
 		</div>
@@ -73,59 +73,146 @@
 	<!--/.section -->
 
 	<!-- START SECTION -->
+	<div class="section hero text-center background-dark dark-bg">
+		<div class="background-image"
+			style="background: url(<c:url value="/resources/images/hero.jpg" />) no-repeat center center; background-size: cover; opacity: .2;"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>CoDevs</h2>
+					<p class="lead">CoDevs è un'azienda di consulenza specializzata
+						nel mondo dell'IT. Offriamo servizi alle più grandi aziende
+						residenti oggi nel mercato.</p>
+					<ul class="list-inline">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/.section -->
+
+	<!-- START SECTION -->
+	<div class="section background-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2 class="section-title">Nostri Servizi</h2>
+					<p class="section-description">I nostri maggiori servizi a
+						portata di un click!</p>
+				</div>
+				<div class="col-md-4">
+					<div class="service-block text-center">
+						<h3>Gestione personale</h3>
+					</div>
+					<!--/.service-block-->
+				</div>
+				<div class="col-md-4">
+					<div class="service-block text-center">
+						<h3>Gestione commesse</h3>
+					</div>
+					<!--/.service-block-->
+				</div>
+				<div class="col-md-4">
+					<div class="service-block text-center">
+						<h3>Gestione rapportini</h3>
+					</div>
+					<!--/.service-block-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/.section -->
+
+
+
+
+
+	<!-- START SECTION -->
+	<div class="section hero text-center background-dark dark-bg">
+		<div class="background-image"
+			style="background: url(<c:url value="/resources/images/hero.jpg" />) no-repeat fixed center center; background-size: cover; opacity: .2;"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3
+						class="text-uppercase letter-spacing-md font-weight-lg margin-zero">Gestisci
+						al meglio tramite CoDevs</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/.section -->
+
+	<!-- START SECTION -->
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2 class="section-title">Supporto</h2>
+					<p class="section-description">Per errori o suggerimenti non
+						esitare a contattarci.</p>
+				</div>
+				<div class="col-md-8 col-md-offset-2">
+					<form id="contact" method="post" class="form" role="form">
+						<div class="row">
+							<div class="col-md-6 form-group">
+								<input class="form-control" id="name" name="name"
+									placeholder="Nome" type="text" required />
+							</div>
+							<div class="col-md-6 form-group">
+								<input class="form-control" id="email" name="email"
+									placeholder="Email" type="email" required />
+							</div>
+						</div>
+						<textarea class="form-control" id="message" name="message"
+							placeholder="Messaggio" rows="5"></textarea>
+						<br />
+						<div class="row">
+							<div class="col-md-12 form-group">
+								<button class="btn btn-primary" type="submit">Invia</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--/.row-->
+		</div>
+		<!--/.container-->
+	</div>
+	<!--/.section -->
+
+
+
+	<!-- START SECTION -->
 	<div class="section background-dark dark-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
-					<h3
-						class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">About
-						Us</h3>
-					<p>Sed egestas, ante et vulputate volutpat, eros pede semper
-						est, vitae luctus metus libero eu augue. Morbi purus libero,
-						faucibus adipiscing, commodo quis, gravida id, est.</p>
-					<p>Sed tempus feugiat adipiscing nisl cursus aliquam dolore.</p>
-				</div>
-				<div class="col-md-4 col-md-offset-1">
-					<h3
-						class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">USA
-						Office</h3>
-					<address>
-						<strong>Twitter, Inc.</strong><br> 1355 Market Street, Suite
-						900<br> San Francisco, CA 94103<br> <abbr title="Phone">P:</abbr>
-						(123) 456-7890
-					</address>
-					<address>
-						<strong>Full Name</strong><br> <a href="mailto:#">first.last@example.com</a>
-					</address>
-				</div>
-
-				<div class="col-md-4">
-					<h3
-						class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">UK
-						Office</h3>
-					<address>
-						<strong>Twitter, Inc.</strong><br> 1355 Market Street, Suite
-						900<br> San Francisco, CA 94103<br> <abbr title="Phone">P:</abbr>
-						(123) 456-7890
-					</address>
-					<address>
-						<strong>Full Name</strong><br> <a href="mailto:#">first.last@example.com</a>
-					</address>
-				</div>
-				<div class="col-md-12 margin-top-md margin-bottom-md"
-					style="opacity: .2;">
-					<hr />
-				</div>
-				<div
-					class="col-md-12 margin-top-md text-center font-size-sm text-upercase">
-					<p>
-						Ã‚Â© <a href="http://nomadtheme.com" title="nomadtheme"><strong>Nomad
-								Theme</strong></a>. Images: <a href="http://picjumbo.com" title="PicJumbo"><strong>Pic
-								Jumbo</strong></a>. By: <a href="http://freebootstraptemplate.com"
-							title="Free Bootstrap Template"><strong>Free
-								Bootstrap Template</strong></a>.
-					</p>
-				</div>
+				<table width=100% >
+					<tr>
+						<td width=33.3% align="center">
+						<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Informazioni</h3>
+								<p>Azienda leader del<br> settore nella gestione<br> aziendale e
+									della<br> consulenza.</p>
+						</td>
+						<td width=33.3% align="center">
+								<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Sede
+									Italiana</h3>
+								<address>
+									Via Principe di Piemonte, 19<br> Casoria, NA, 80026<br>
+									<abbr title="Phone">T: </abbr> (123) 456-7890 <br> <a
+										href="mailto:#">codevs@newsoft.com</a>
+								</address>
+						</td>
+						<td width=33.3% align="center">
+							<!-- Add font awesome icons --> 
+							<a href="#" class="fa fa-facebook"></a> 
+							<a href="#" class="fa fa-twitter"></a>
+							<br>
+							
+							 <a href="#" class="fa fa-instagram"></a>
+							<a href="#" class="fa fa-linkedin"></a>
+						</td>
+				</table>
 			</div>
 		</div>
 	</div>

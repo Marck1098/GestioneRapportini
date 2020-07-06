@@ -15,6 +15,10 @@
 </head>
 
 <body>
+		<c:set var="log" value="utenteNonLoggato" />
+		<c:if test="${utente.stato eq log}">
+		<c:redirect url = "http://localhost:8080/GestioneRapportini2/login"/>
+		</c:if>
 	<br>
 	<br>
 
@@ -42,26 +46,26 @@
 						<form:hidden path="id" />
 
 						<div class="form-group">
-							<label for="codice" class="col-md-3 control-label">codice</label>
+							<label for="codice" class="col-md-3 control-label">Codice</label>
 							<div class="col-md-9">
 								<form:input path="codice" cssClass="form-control"
 									class="required" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="nome" class="col-md-3 control-label">nome</label>
+							<label for="nome" class="col-md-3 control-label">Nome</label>
 							<div class="col-md-9">
 								<form:input path="nome" cssClass="form-control" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="descrizione" class="col-md-3 control-label">descrizione</label>
+							<label for="descrizione" class="col-md-3 control-label">Descrizione</label>
 							<div class="col-md-9">
 								<form:input path="descrizione" cssClass="form-control" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="piva" class="col-md-3 control-label">piva</label>
+							<label for="piva" class="col-md-3 control-label">Partita Iva</label>
 							<div class="col-md-9">
 								<form:input path="piva" cssClass="form-control" />
 							</div>
@@ -69,7 +73,7 @@
 						<div class="form-group">
 							<!-- Button -->
 							<div class="col-md-offset-3 col-md-9">
-								<form:button cssClass="btn btn-primary" onclick="validateForm()">Submit</form:button>
+								<form:button cssClass="btn btn-primary" onclick="validateForm()">Invia</form:button>
 							</div>
 						</div>
 					</form:form>

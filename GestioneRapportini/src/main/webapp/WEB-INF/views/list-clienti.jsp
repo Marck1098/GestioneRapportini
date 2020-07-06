@@ -64,6 +64,10 @@
   		<![endif]-->
 </head>
 <body>
+	<c:set var="log" value="utenteNonLoggato" />
+	<c:if test="${utente.stato eq log}">
+		<c:redirect url="http://localhost:8080/GestioneRapportini2/login" />
+	</c:if>
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -84,7 +88,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="list">Liste</a></li>
 					<li><a href="logout">Logout</a></li>
-					<li><a href="contatti">Contatti</a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -103,7 +107,7 @@
 				<div class="panel-body">
 					<table class="table table-striped table-bordered">
 						<tr>
-							<th>Id</th>
+							<th>ID</th>
 							<th>Codice</th>
 							<th>Nome</th>
 							<th>Descrizione</th>
@@ -151,39 +155,42 @@
 	</div>
 
 	<!-- START SECTION -->
-	<div class="section background-dark dark-bg">
-		<div class="container">
-			<div class="row">
-				<table width=100% >
-					<tr>
-						<td width=33.3% align="center">
-						<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Informazioni</h3>
-								<p>Azienda leader del<br> settore nella gestione<br> aziendale e
-									della<br> consulenza.</p>
-						</td>
-						<td width=33.3% align="center">
-								<h3 class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Sede
+	<footer>
+		<div class="section background-dark dark-bg">
+			<div class="container">
+				<div class="row">
+					<table width=100%>
+						<tr>
+							<td width=33.3% align="center">
+								<h3
+									class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Informazioni</h3>
+								<p>
+									Azienda leader del<br> settore nella gestione<br>
+									aziendale e della<br> consulenza.
+								</p>
+							</td>
+							<td width=33.3% align="center">
+								<h3
+									class="text-uppercase font-size-md letter-spacing-md font-weight-lg ">Sede
 									Italiana</h3>
 								<address>
 									Via Principe di Piemonte, 19<br> Casoria, NA, 80026<br>
 									<abbr title="Phone">T: </abbr> (123) 456-7890 <br> <a
 										href="mailto:#">codevs@newsoft.com</a>
 								</address>
-						</td>
-						<td width=33.3% align="center">
-							<!-- Add font awesome icons --> 
-							<a href="#" class="fa fa-facebook"></a> 
-							<a href="#" class="fa fa-twitter"></a>
-							<br>
-							
-							 <a href="#" class="fa fa-instagram"></a>
-							<a href="#" class="fa fa-linkedin"></a>
-						</td>
-				</table>
+							</td>
+							<td width=33.3% align="center">
+								<!-- Add font awesome icons --> <a href="#"
+								class="fa fa-facebook"></a> <a href="#" class="fa fa-twitter"></a>
+								<br> <a href="#" class="fa fa-instagram"></a> <a href="#"
+								class="fa fa-linkedin"></a>
+							</td>
+					</table>
+				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
 	<!--/.section -->
-
+	
 </body>
 </html>
