@@ -3,6 +3,7 @@ package it.gestrap.springmvc.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import it.gestrap.DAO.DipendentiDao;
@@ -10,6 +11,7 @@ import it.gestrap.DAO.TipoCommesseDao;
 import it.gestrap.entita.Dipendenti;
 import it.gestrap.entita.TipoCommesse;
 
+@Service
 public class TipoCommesseServiceImpl implements TipoCommesseService {
 
 

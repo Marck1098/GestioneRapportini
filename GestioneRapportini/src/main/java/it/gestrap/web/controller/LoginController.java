@@ -47,12 +47,13 @@ public class LoginController {
 
 		Dipendenti dipendete= service.getCf(cf);
 		String prifiloDip=dipendete.getProfilo().getProfilo();
-
+		int idDip=dipendete.getId();
 		if(dipendete!=null) { 
 			
 			if(dipendete.getPassword().equals(password)) {
 
 				model.setViewName("home");
+				utenteBean.setId(idDip);
 				utenteBean.setCf(cf);
 				utenteBean.setProfilo(prifiloDip);
 				utenteBean.setStato();

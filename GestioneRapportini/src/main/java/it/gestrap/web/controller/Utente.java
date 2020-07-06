@@ -7,6 +7,7 @@ import it.gestrap.util.Costanti;
 @Component
 public class Utente {
 
+	int id;
 	String cf;
 	String profilo;
 	String stato;
@@ -20,6 +21,16 @@ public class Utente {
 		this.stato = stato;
 	}
 
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
 	public String getCf() {
 		return cf;
 	}

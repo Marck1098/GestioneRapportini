@@ -1,7 +1,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
 
 
 <!DOCTYPE html>
@@ -105,7 +107,7 @@
 		</tr>
 
 		<c:set var="admin" value="admin" />
-		<c:if test="${utente.profilo eq admin}">
+		<c:if test = "${fn:containsIgnoreCase(utente.profilo, 'admin')}">
 			<tr>
 				<td width=20%></td>
 				<td><a href="dipendenti" id="button-2"
@@ -115,7 +117,7 @@
 		</c:if>
 
 
-		<c:if test="${utente.profilo eq admin}">
+		<c:if test = "${fn:containsIgnoreCase(utente.profilo, 'admin')}">
 			<tr>
 				<td width=20%></td>
 				<td><a href="clienti" id="button-2"

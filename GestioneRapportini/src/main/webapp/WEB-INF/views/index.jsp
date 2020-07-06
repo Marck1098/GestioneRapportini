@@ -70,6 +70,10 @@
   		<![endif]-->
 </head>
 <body>
+	<c:set var="log" value="utenteLoggato" />
+		<c:if test="${utente.stato eq log}">
+		<c:redirect url = "http://localhost:8080/GestioneRapportini2/home"/>
+		</c:if>
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->

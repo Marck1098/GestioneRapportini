@@ -43,7 +43,7 @@ public class ClientiController {
 				theModel.setViewName("redirect:/clienti");
 			}
 			else {
-				theModel.setViewName("redirect:/cliente/showForm");
+				theModel.setViewName("clienti-form");
 				theModel.addObject("cliente", cliente);
 			}
 		}

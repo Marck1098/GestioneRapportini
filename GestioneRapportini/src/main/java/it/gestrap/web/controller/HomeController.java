@@ -45,12 +45,4 @@ public class HomeController {
 	public String home() {
 		return "home";  
 	}
-    
-    @RequestMapping("/login")
-    public String login(@ModelAttribute("loginBean")Utente loginbean) {
-        return "login";
-    }
-    
-   
-    
 }
