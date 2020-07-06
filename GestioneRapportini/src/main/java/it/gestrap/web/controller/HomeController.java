@@ -26,7 +26,11 @@ public class HomeController {
 	
 	
 	@GetMapping("/")
-	public ModelAndView index() { 
+	public ModelAndView index(HttpServletRequest request,  HttpServletResponse response) { 
+		utenteBean.setCf(null);
+		utenteBean.setProfilo(null);
+		utenteBean.resetStato();
+		request.getSession().setAttribute("utente",utenteBean);
 		return new ModelAndView("index"); 
 	}
 

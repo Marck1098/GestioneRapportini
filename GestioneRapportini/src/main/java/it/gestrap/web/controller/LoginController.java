@@ -76,7 +76,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = {"/logout"}, method = RequestMethod.GET)
-	public String logout(SessionStatus session, HttpServletRequest request,  HttpServletResponse response){
+	public String logout(HttpServletRequest request,  HttpServletResponse response){
 		ModelAndView model = new ModelAndView();
 		model.addObject("lgo", "Logout effettuato con successo");
 		utenteBean.setCf(null);
