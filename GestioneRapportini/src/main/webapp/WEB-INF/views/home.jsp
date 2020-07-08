@@ -47,10 +47,6 @@
 </head>
 
 <body>
-		<c:set var="log" value="utenteNonLoggato" />
-		<c:if test="${utente.stato eq log}">
-		<c:redirect url = "http://localhost:8080/GestioneRapportini2/login"/>
-		</c:if>
 		
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">

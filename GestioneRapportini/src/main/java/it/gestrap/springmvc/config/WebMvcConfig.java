@@ -1,5 +1,8 @@
 package it.gestrap.springmvc.config;
 
+import javax.servlet.Filter;
+
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
 import org.springframework.context.annotation.ComponentScan;
@@ -12,6 +15,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import it.gestrap.web.controller.Utente;
+import it.gestrap.web.filtri.HomeFilter;
 
 /**
  * @author Ramesh Fadatare
@@ -40,7 +44,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
     
     @Bean
     Utente utenteBean(){
+    	
         return new Utente();
     }
+    
+  
+    
     
 }

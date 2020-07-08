@@ -20,17 +20,14 @@ public class HomeController {
 
 	@Autowired
 	private ClientiService service;
-    @Autowired
-    private Utente utenteBean;
     
-	
-	
 	@GetMapping("/")
-	public ModelAndView index(HttpServletRequest request,  HttpServletResponse response) { 
-		utenteBean.setCf(null);
-		utenteBean.setProfilo(null);
-		utenteBean.resetStato();
-		request.getSession().setAttribute("utente",utenteBean);
+	public ModelAndView wIndex(HttpServletRequest request,  HttpServletResponse response) {
+		return new ModelAndView("index"); 
+	}
+	
+	@GetMapping("/index")
+	public ModelAndView index(HttpServletRequest request,  HttpServletResponse response) {
 		return new ModelAndView("index"); 
 	}
 

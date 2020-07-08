@@ -1,0 +1,17 @@
+
+/* CSS per RICERCA IN TABELLA HTML - FABIO DONATANTONIO 2010 */
+th.intestazione{
+	background-color:#0000FF;
+	color:#FFFFFF;
+	font-weight:bold;
+	padding:3px;
+}
+
+td.default{
+	background-color:#7FFFD4;
+}
+
+td.trovato{
+	background-color:#FF0000;
+	font-weight:bold;
+}

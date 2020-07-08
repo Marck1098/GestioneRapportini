@@ -15,16 +15,10 @@
 </head>
 
 <body>
-		<c:set var="log" value="utenteNonLoggato" />
-		<c:if test="${utente.stato eq log}">
-		<c:redirect url = "http://localhost:8080/GestioneRapportini2/login"/>
-		</c:if>
 	<br>
 	<br>
-
 	<br>
 	<br>
-
 	<div class="container">
 		<div class="col-md-offset-2 col-md-7">
 			<div class="panel panel-info">
@@ -40,8 +34,9 @@
 						<label for="msg"> <%
  						Object msg = request.getAttribute("msg");
  						if (msg != null && msg != "") {
- 						out.println("<label><font color=\"#E42217\"><b>" + msg + "</b></font></label> "); }
- 						%>
+ 						out.println("<label><font color=\"#E42217\"><b>" + msg + "</b></font></label> ");
+ 							}
+ 							%>
 						</label>
 						<form:hidden path="id" />
 
@@ -65,7 +60,8 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="piva" class="col-md-3 control-label">Partita Iva</label>
+							<label for="piva" class="col-md-3 control-label">Partita
+								Iva</label>
 							<div class="col-md-9">
 								<form:input path="piva" cssClass="form-control" />
 							</div>

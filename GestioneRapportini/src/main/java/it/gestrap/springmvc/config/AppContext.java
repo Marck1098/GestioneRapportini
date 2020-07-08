@@ -2,9 +2,11 @@ package it.gestrap.springmvc.config;
 
 import java.util.Properties;
 
+import javax.servlet.Filter;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -14,6 +16,8 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+
+import it.gestrap.web.filtri.HomeFilter;
 
 
 @Configuration
@@ -60,4 +64,6 @@ public class AppContext {
         transactionManager.setSessionFactory(sessionFactory().getObject());
         return transactionManager;
     }
+    
+   
 }

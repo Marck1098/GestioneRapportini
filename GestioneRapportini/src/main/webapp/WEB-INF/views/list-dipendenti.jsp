@@ -33,17 +33,16 @@
 <link
 	href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
 	rel='stylesheet' type='text/css'>
-<!-- Style -->
-<link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
-<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
-<!-- end CSS -->
 
 <!-- Style -->
+<link href="<c:url value="/resources/css/ricerca.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
 <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 <!-- end CSS -->
 
 <!--Js-->
+<script src="<c:url value="/resources/js/ripristinaTable.js" />"></script>
+
 <!-- jQuery -->
 <script src="//code.jquery.com/jquery.js"></script>
 <!-- Bootstrap JavaScript -->
@@ -64,12 +63,7 @@
   		<![endif]-->
 </head>
 <body>
-	<c:set var="log" value="utenteNonLoggato" />
-	<c:if test="${utente.stato eq log}">
-		<c:redirect url="http://localhost:8080/GestioneRapportini2/login" />
-	</c:if>
-	
-	
+
 	<!-- Navbar -->
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
@@ -108,19 +102,20 @@
 					<div class="panel-title">Dipendenti</div>
 				</div>
 				<div class="panel-body">
-				
-				
-					<table class="table table-striped table-bordered">
+
+
+					<table class="table table-striped table-bordered" id='tabella'>
 						<tr>
 							<th>ID</th>
 							<th>Matricola</th>
 							<th>Nome</th>
 							<th>Cognome</th>
+							<th>password</th>
 							<th>Codice Fiscale</th>
 							<th>Numero di telefono</th>
 							<th>Data Assunzione</th>
 							<th>Ruolo</th>
-							
+
 							<th></th>
 						</tr>
 
@@ -142,9 +137,10 @@
 								<td>${tempdipendente.nome}</td>
 								<td>${tempdipendente.cognome}</td>
 								<td>${tempdipendente.codfiscale}</td>
+								<td>${tempdipendente.password}</td>
 								<td>${tempdipendente.numerotelefono}</td>
 								<td>${tempdipendente.dataassunzione}</td>
-								<td>${tempdipendente.ruoli.descrizione}</td>
+								<td>${tempdipendente.ruoli.acronimo}</td>
 								<td>
 									<!-- display the update link --> <a href="${updateLink}">Aggiorna</a>
 									| <a href="${deleteLink}"
@@ -159,10 +155,15 @@
 					<input type="button" value="Aggiungi Dipendente"
 						onclick="window.location.href='/GestioneRapportini2/dipendenti/showForm'; return false;"
 						class="btn btn-primary" />
+
+					<form name='ricerca'>
+						Valore da cercare in tutta la tabella: <input type='text'
+							size='10' name='campo' /> <input type='button'
+							value='Cerca in tabella' onClick="ricercaInTable('tabella')" class="btn btn-primary" /> <span id='responso'></span>
+					</form>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<!-- START SECTION -->
@@ -202,6 +203,6 @@
 		</div>
 	</footer>
 	<!--/.section -->
-	
+
 </body>
 </html>

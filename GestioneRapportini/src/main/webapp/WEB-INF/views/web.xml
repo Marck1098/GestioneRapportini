@@ -4,4 +4,13 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+ <filter>
+     <filter-name>LoginFilter</filter-name>
+        <filter-class>it.gestrap.web.filtri.LoginFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/home</url-pattern>
+</filter-mapping>
 </web-app>

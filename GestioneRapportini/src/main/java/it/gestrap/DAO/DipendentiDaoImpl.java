@@ -58,6 +58,5 @@ public class DipendentiDaoImpl implements DipendentiDao{
 		Dipendenti dipendente = (Dipendenti) session.createQuery(sqlQuery,Dipendenti.class).setParameter("cf", cf).uniqueResult();
 		return dipendente;
 	}
-    
 	
 }

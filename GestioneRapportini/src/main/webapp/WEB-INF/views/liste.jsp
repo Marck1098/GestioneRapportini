@@ -4,8 +4,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 	
-
-
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -68,10 +66,6 @@
 </head>
 
 <body>
-	<c:set var="log" value="utenteNonLoggato" />
-	<c:if test="${utente.stato eq log}">
-		<c:redirect url="http://localhost:8080/GestioneRapportini2/login" />
-	</c:if>
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -96,51 +90,52 @@
 		</div>
 	</nav>
 	<!-- /.navbar-collapse -->
-
-	<table width=100% height="250px"  style="margin-bottom: 40px;">
+<table width=100% height="250px"  style="margin-bottom: 40px;">
 		<tr>
 			<th></th>
-			<th><center>
+			<th><left>
 					<h4>Seleziona la lista che vuoi visualizzare</h4>
-				</center></th>
+				</left></th>
 			<th></th>
 		</tr>
 
 		<c:set var="admin" value="admin" />
 		<c:if test = "${fn:containsIgnoreCase(utente.profilo, 'admin')}">
 			<tr>
-				<td width=20%></td>
+				<td width=13%></td>
 				<td><a href="dipendenti" id="button-2"
-					class="ui-btn ui-corner-all ui-btn-a">Dipendenti</a></td>
-				<td width=20%></td>
+					class=>Dipendenti</a></td>
+				<td width=13%></td>
 			</tr>
 		</c:if>
 
 
 		<c:if test = "${fn:containsIgnoreCase(utente.profilo, 'admin')}">
 			<tr>
-				<td width=20%></td>
+				<td width=10%></td>
 				<td><a href="clienti" id="button-2"
-					class="ui-btn ui-corner-all ui-btn-a">Clienti</a></td>
-				<td width=20%></td>
+					class=>Clienti</a></td>
+				<td width=10%></td>
 			</tr>
 		</c:if>
 
 		<tr>
-			<td width=20%></td>
+			<td width=10%></td>
 			<td><a href="rapportini" id="button-2"
-				class="ui-btn ui-corner-all ui-btn-a">Rapportini</a></td>
-			<td width=20%></td>
+				class=>Rapportini</a></td>
+			<td width=10%></td>
 		</tr>
 
 		<tr>
-			<td width=20%></td>
+			<td width=10%></td>
 			<td><a href="commesse" id="button-2"
-				class="ui-btn ui-corner-all ui-btn-a">Commesse</a></td>
-			<td width=20%></td>
+				class=>Commesse</a></td>
+			<td width=10%></td>
 		</tr>
 
 	</table>
+
+
 
 
 
